@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "SoDoSans";
+  src: url("/fonts/SoDoSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SoDoSans";
+  src: url("/fonts/SoDoSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "SoDoSans";
+  src: url("/fonts/SoDoSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
