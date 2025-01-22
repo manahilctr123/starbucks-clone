@@ -13,22 +13,28 @@ import DribbbleIcon from "../components/DribbbleIcon";
 export default function Home() {
   return (
     <>
-      <header className="w-full bg-white shadow-sm">
-        <nav className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-6">
-          {/* Left section */}
+      <header
+        className={`
+          w-full bg-white
+          shadow-[0_1px_3px_rgba(0,0,0,.1),0_2px_2px_rgba(0,0,0,.06),0_0_2px_rgba(0,0,0,.07)]
+        `}
+      >
+        <nav className="mx-auto flex h-[72px] sm:h-[95px] max-w-[1440px] items-center justify-between px-6">
+          {/* Left section - Logo */}
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center">
               <img
                 src="/starbuckslogo.png"
                 alt="Starbucks"
-                className="h-[51px] w-[51px]"
+                className="h-[40px] w-[40px]"
               />
             </Link>
-            <ul className="flex gap-8">
+            {/* Menu items - Hidden on mobile */}
+            <ul className="hidden sm:flex gap-8">
               <li>
                 <Link
-                  href="#"
-                  className="text-[13px] font-extrabold tracking[.4em] text-black hover:text-[#00754a]"
+                  href="/menu"
+                  className="text-[13px] font-extrabold tracking-[.01em] text-black hover:text-[#00754a]"
                 >
                   MENU
                 </Link>
@@ -52,13 +58,13 @@ export default function Home() {
             </ul>
           </div>
 
-          {/* Right section */}
-          <div className="flex items-center gap-8">
+          {/* Right section - Hidden on mobile */}
+          <div className="hidden sm:flex items-center gap-8">
             <div className="flex items-center gap-2">
               <i className="fa-solid fa-location-dot"></i>
               <Link
                 href="#"
-                className="text-[14px] font-semibold text-black hover:text-[#00754a]"
+                className="text-[14px] font-medium text-black hover:text-[#00754a]"
               >
                 Find a store
               </Link>
@@ -78,14 +84,29 @@ export default function Home() {
               </Link>
             </div>
           </div>
+
+          {/* Mobile Menu Icon - Shown only on mobile */}
+          <button className="sm:hidden text-black">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </nav>
       </header>
       <main>
-        <section className="bg-[#CEE6B5] mx-4 md:mx-2 mt-8">
+        {/* First hero section */}
+        <section className="bg-[#CEE6B5] mx-0 sm:mx-4 md:mx-2 mt-8">
           <div className="mx-auto max-w-[1440px]">
             <div className="flex flex-col md:flex-row">
               {/* Left side - Image container */}
-              <div className="w-full md:w-1/2 h-full">
+              <div className="w-full md:w-1/2 h-[325.52px] md:h-full">
                 <div className="relative h-full">
                   <img
                     src="/starbucksimg1.jpg"
@@ -96,24 +117,21 @@ export default function Home() {
               </div>
 
               {/* Right side - Content container */}
-              <div className="w-full md:w-1/2 flex items-center justify-center">
-                <div className="text-center">
-                  <h1 className="font-['SoDoSans','Helvetica_Neue',Helvetica,Arial,sans-serif] text-[50px] font-medium text-[#1D3C34] mb-8 leading-[1.1] whitespace-nowrap tracking-[-.02em]">
+              <div className="w-full md:w-1/2 flex items-center justify-center bg-[#CEE6B5] py-8 md:py-0">
+                <div className="max-w-[343px] md:max-w-[487.91px] text-center">
+                  <h1 className="font-['SoDoSans','Helvetica_Neue',Helvetica,Arial,sans-serif] text-[28px] md:text-[50px] font-[500] text-[#1D3C34] mb-8 leading-[1.1] whitespace-nowrap tracking-[.08em]">
                     The best of winter
                   </h1>
-                  <p className="text-[21px] md:text-[24px] leading-[1.5] text-[#1e3932] mb-8">
-                    A new winter menu is here, featuring new
-                    <br />
-                    Cortado alongside Pistachio beverages and
-                    <br />
-                    Matcha Latte—now customized to your
-                    <br />
+                  <p className="w-[343px] h-[165px] text-[22px] md:text-[24px] text-center leading-[1.3] text-[#1e3932] mb-8 tracking-[.05em] flex items-center">
+                    A new winter menu is here, featuring new <br />
+                    Cortado alongside Pistachio beverages and <br />
+                    Matcha Latte—now customized to your <br />
                     perfect level of sweetness.
                   </p>
                   <a
                     href="#"
                     className="inline-block rounded-[50px] border border-[#1e3932] 
-                      bg-transparent px-8 py-[8px] text-[16px] font-semibold 
+                      bg-transparent px-4 py-[7px] text-[14px] font-medium 
                       text-[#1e3932] transition-all duration-200
                       hover:bg-[rgba(30,57,50,0.1)]"
                   >
@@ -126,46 +144,44 @@ export default function Home() {
         </section>
 
         {/* Second hero section */}
-        <section className="bg-[#1e3932] mx-4 md:mx-2 mt-8 md:mt-8">
+        <section className="bg-[#1e3932] mx-0 sm:mx-4 md:mx-2 mt-8 md:mt-8">
           <div className="mx-auto max-w-[1440px]">
             <div className="flex flex-col md:flex-row">
-              {/* Left side - Content container */}
-              <div className="w-full md:w-1/2 flex items-center justify-center bg-[#CEE6B5]">
-                <div className="text-center">
-                  <h1 className="font-['SoDoSans','Helvetica_Neue',Helvetica,Arial,sans-serif] text-[50px] font-medium text-[#1D3C34] mb-8 leading-[1.1] tracking-[-.02em]">
-                    From the
-                    <br />
-                    birthplace of
-                    <br />
-                    coffee
-                  </h1>
-                  <p className="text-[21px] md:text-[24px] leading-[1.5] text-[#1D3C34] mb-8">
-                    With distinctive floral, tangerine and lemon
-                    <br />
-                    balm notes, Single-Origin Ethiopia is a
-                    <br />
-                    unique global favorite.
-                  </p>
-                  <a
-                    href="#"
-                    className="inline-block rounded-[50px] border border-[#1D3C34] 
-                      bg-transparent px-8 py-[8px] text-[16px] font-semibold 
-                      text-[#1D3C34] transition-all duration-200
-                      hover:bg-[rgba(30,57,50,0.1)]"
-                  >
-                    Add to order
-                  </a>
-                </div>
-              </div>
-
-              {/* Right side - Image container */}
-              <div className="w-full md:w-1/2 h-full">
+              {/* Image container - First on mobile */}
+              <div className="w-full md:w-1/2 h-[325.52px] md:h-full">
                 <div className="relative h-full">
                   <img
                     src="/st2img.jpg"
                     alt="Ethiopia Single-Origin Coffee"
                     className="w-full h-full object-cover"
                   />
+                </div>
+              </div>
+
+              {/* Content container - Second on mobile */}
+              <div className="w-full md:w-1/2 flex items-center justify-center bg-[#CEE6B5] py-8 md:py-0">
+                <div className="max-w-[343px] md:max-w-[487.91px] text-center">
+                  <div className="w-[327.04px] h-[70.09px] md:w-auto md:h-auto flex items-center justify-center">
+                    <h1 className="font-['SoDoSans','Helvetica_Neue',Helvetica,Arial,sans-serif] text-[28px] md:text-[50px] font-[500] text-[#1D3C34] mb-4 leading-[1.2] tracking-[.08em] text-center">
+                      From the
+                      <br />
+                      birthplace of coffee
+                    </h1>
+                  </div>
+                  <p className="w-[343px] h-[165px] text-[22px] md:text-[24px] text-center leading-[1.3] text-[#1D3C34] mb-4 tracking-[.05em] flex items-center">
+                    With distinctive floral, tangerine and lemon <br />
+                    balm notes, Single-Origin Ethiopia is a <br />
+                    unique global favorite.
+                  </p>
+                  <a
+                    href="#"
+                    className="inline-block rounded-[50px] border border-[#1E3932] 
+                      bg-transparent px-4 py-[7px] text-[14px] font-medium 
+                      text-[#1E3932] transition-all duration-200
+                      hover:bg-[rgba(0,0,0,0.06)]"
+                  >
+                    Add to order
+                  </a>
                 </div>
               </div>
             </div>
@@ -188,15 +204,15 @@ export default function Home() {
           {/* Right Text Container */}
           <div className="flex-1 bg-[#FBF5E7] flex flex-col justify-center items-center text-center px-4 py-8 md:py-0">
             <div>
-              <h1 className="text-[24px] font-medium text-[#1E3932] mb-6">
+              <h1 className="text-[24px] font-medium text-[#1E3932] mb-6 tracking-[.03em]">
                 It's a great day for free coffee
               </h1>
-              <p className="mb-8 text-[19px] text-[#1E3932]">
+              <p className="mb-8 text-[19px] text-[#1E3932] tracking-[.02em]">
                 Start your Starbucks® Rewards journey with a coffee on <br />
                 us. Join now and enjoy a free handcrafted drink with a <br />
                 qualifying purchase during your first week.*
               </p>
-              <button className="border border-black text-black px-4 py-1.5 rounded-full hover:bg-[rgba(0,0,0,0.06)] transition duration-200">
+              <button className="border border-[#1E3932] text-[#1E3932] px-4 py-1.5 rounded-full hover:bg-[rgba(0,0,0,0.06)] transition duration-200 font-medium">
                 Join now
               </button>
             </div>
@@ -204,8 +220,8 @@ export default function Home() {
         </section>
 
         {/* Disclaimer Text Section */}
-        <section className="px-8 md:px-16 pt-12 pb-6 shadow-sm border-b">
-          <p className="text-[14px] text-black leading-[1.6] text-center max-w-[800px] mx-auto">
+        <section className="px-8 md:px-16 pt-12 pb-6">
+          <p className="text-[14px] text-black leading-[1.8] text-center max-w-[800px] mx-auto box-inherit">
             *Valid for new Starbucks Rewards members for 7 days from sign up.
             Coupon will be available in the <br />
             offers tab of your Starbucks app following sign up and may take up
@@ -220,7 +236,12 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-white px-8 md:px-16 py-12">
+        <footer
+          className={`
+            bg-white px-8 md:px-16 py-12
+            shadow-[0_-1px_3px_rgba(0,0,0,.1),0_-2px_2px_rgba(0,0,0,.06),0_0_2px_rgba(0,0,0,.07),0_1px_3px_rgba(0,0,0,.1),0_2px_2px_rgba(0,0,0,.06),0_0_2px_rgba(0,0,0,.07),0_1px_3px_rgba(0,0,0,.1),0_2px_2px_rgba(0,0,0,.06),0_0_2px_rgba(0,0,0,.07)]
+          `}
+        >
           {/* Footer Links Grid */}
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
             {/* About Us Column */}
@@ -470,10 +491,8 @@ export default function Home() {
               </ul>
             </div>
           </div>
-
           {/* Divider */}
-          <div className="border-t border-[#rgba(0,0,0,.1)] my-8" />
-
+          <div className="border-t border-gray-300 my-8" />
           {/* Social Links and Legal */}
           <div className="space-y-8">
             {/* Social Media Icons */}
