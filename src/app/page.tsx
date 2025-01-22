@@ -33,22 +33,18 @@ export default function Home() {
 
               {/* Right side - Content container */}
               <div className="w-full md:w-1/2 flex items-center justify-center bg-[#CEE6B5] py-8 md:py-0">
-                <div className=" text-center flex flex-col items-center">
-                  <h1 className="font-['SoDoSans','Helvetica_Neue',Helvetica,Arial,sans-serif] text-[28px] md:text-[50px] font-[500] text-[#1D3C34] mb-4 leading-[1.1] whitespace-nowrap tracking-[.08em]">
+                <div className="max-w-[343px] md:max-w-[487.91px] text-center">
+                  <h1 className="font-['SoDoSans','Helvetica_Neue',Helvetica,Arial,sans-serif] text-[28px] md:text-[50px] font-[515] text-[#1D3C34] mb-4 leading-[1.2] tracking-[.08em]">
                     The best of winter
                   </h1>
-                  <p className="h-[165px] text-[22px] md:text-[24px] text-center leading-[1.5] text-[#1e3932] mb-6 tracking-[.05em] flex items-center justify-center">
-                    A new winter menu is here, featuring new <br />
-                    Cortado alongside Pistachio beverages and <br />
-                    Matcha Latte—now customized to your <br />
+                  <p className="w-[343px] h-[165px] text-[22px] md:text-[24px] leading-[1.3] text-[#1e3932] mb-4 tracking-[.05em] flex items-center">
+                    A new winter menu is here, featuring new Cortado alongside
+                    Pistachio beverages and Matcha Latte—now customized to your
                     perfect level of sweetness.
                   </p>
                   <a
                     href="#"
-                    className="inline-block rounded-[50px] border border-[#1e3932] 
-                      bg-transparent px-4 py-[7px] text-[16px] font-medium 
-                      text-[#1e3932] transition-all duration-200
-                      hover:bg-[rgba(30,57,50,0.1)]"
+                    className="inline-block rounded-[50px] border border-[#1e3932] bg-transparent px-4 py-[7px] text-[14px] font-medium text-[#1e3932] transition-all duration-200 hover:bg-[rgba(30,57,50,0.1)]"
                   >
                     Add to order
                   </a>
@@ -64,24 +60,21 @@ export default function Home() {
             <div className="flex flex-col md:flex-row">
               {/* Content container - Second on mobile */}
               <div className="w-full md:w-1/2 flex items-center justify-center bg-[#CEE6B5] py-8 md:py-0">
-                <div className="text-center flex flex-col items-center">
-                  <h1 className="font-['SoDoSans','Helvetica_Neue',Helvetica,Arial,sans-serif] text-[28px] md:text-[50px] font-[500] text-[#1D3C34] mb-4 leading-[1.1] whitespace-nowrap tracking-[.08em]">
-                    From the
-                    <br />
-                    birthplace of <br />
-                    coffee
-                  </h1>
-                  <p className="h-[165px] text-[22px] md:text-[24px] text-center leading-[1.5] text-[#1D3C34] mb-6 tracking-[.05em] flex items-center justify-center">
-                    With distinctive floral, tangerine and lemon <br />
-                    balm notes, Single-Origin Ethiopia is a <br />
-                    unique global favorite.
+                <div className="max-w-[343px] md:max-w-[487.91px] text-center">
+                  <div className="w-[327.04px] h-[70.09px] md:w-auto md:h-auto flex items-center justify-center">
+                    <h1 className="font-['SoDoSans','Helvetica_Neue',Helvetica,Arial,sans-serif] text-[28px] md:text-[50px] font-[500] text-[#1D3C34] mb-4 leading-[1.2] tracking-[.08em] text-center">
+                      From the
+                      <br />
+                      birthplace of coffee
+                    </h1>
+                  </div>
+                  <p className="w-[343px] h-[165px] text-[22px] md:text-[24px] leading-[1.3] text-[#1D3C34] mb-4 tracking-[.05em] flex items-center">
+                    With distinctive floral, tangerine and lemon balm notes,
+                    Single-Origin Ethiopia is a unique global favorite.
                   </p>
                   <a
                     href="#"
-                    className="inline-block rounded-[50px] border border-[#1E3932] 
-                      bg-transparent px-4 py-[7px] text-[16px] font-medium 
-                      text-[#1E3932] transition-all duration-200
-                      hover:bg-[rgba(0,0,0,0.06)]"
+                    className="inline-block rounded-[50px] border border-[#1E3932] bg-transparent px-4 py-[7px] text-[14px] font-medium text-[#1E3932] transition-all duration-200 hover:bg-[rgba(0,0,0,0.06)]"
                   >
                     Add to order
                   </a>
