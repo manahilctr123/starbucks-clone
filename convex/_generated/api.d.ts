@@ -13,6 +13,9 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
+import type * as categories from "../categories.js";
+import type * as menuItems from "../menuItems.js";
+import type * as seed from "../seed.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -22,7 +25,11 @@ import type {
  * const myFunctionReference = api.myModule.myFunction;
  * ```
  */
-declare const fullApi: ApiFromModules<{}>;
+declare const fullApi: ApiFromModules<{
+  categories: typeof categories;
+  menuItems: typeof menuItems;
+  seed: typeof seed;
+}>;
 export declare const api: FilterApi<
   typeof fullApi,
   FunctionReference<any, "public">

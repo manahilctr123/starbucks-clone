@@ -1,8 +1,9 @@
 "use client";
 
+import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
-import React from "react";
 import { usePathname } from "next/navigation";
+import { Authenticated, Unauthenticated, AuthLoading } from "convex/react";
 
 function Header() {
   const pathname = usePathname();
@@ -70,18 +71,21 @@ function Header() {
             </Link>
           </div>
           <div className="flex items-center gap-4">
-            <Link
-              href="#"
-              className="rounded-[30px] border border-black px-4 py-1.5 text-[13px] font-semibold text-black transition-all hover:bg-[#f1f1f1]"
-            >
-              Sign in
-            </Link>
-            <Link
-              href="#"
-              className="rounded-[30px] bg-black px-4 py-1.5 text-[13px] font-semibold text-white transition-all hover:bg-[#333]"
-            >
-              Join now
-            </Link>
+            <Unauthenticated>
+              <SignInButton mode="modal">
+                <button className="rounded-[30px] border border-black px-4 py-1.5 text-[13px] font-semibold text-black transition-all hover:bg-[#f1f1f1]">
+                  Sign in
+                </button>
+              </SignInButton>
+              <SignUpButton mode="modal">
+                <button className="rounded-[30px] bg-black px-4 py-1.5 text-[13px] font-semibold text-white transition-all hover:bg-[#333]">
+                  Join now
+                </button>
+              </SignUpButton>
+            </Unauthenticated>
+            <Authenticated>
+              <UserButton />
+            </Authenticated>
           </div>
         </div>
 
