@@ -2,6 +2,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import { Metadata } from "next";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Starbucks Clone",
@@ -23,7 +25,11 @@ export default function RootLayout({
           />
         </head>
         <body className="font-sans antialiased" suppressHydrationWarning>
-          <ConvexClientProvider>{children}</ConvexClientProvider>
+          <ConvexClientProvider>
+            <Header />
+            {children}
+            <Footer />
+          </ConvexClientProvider>
         </body>
       </html>
     </ClerkProvider>
