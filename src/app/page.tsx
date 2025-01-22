@@ -1,14 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import FacebookIcon from "../components/FacebookIcon";
-import InstagramIcon from "../components/InstagramIcon";
-import YoutubeIcon from "../components/YoutubeIcon";
-import LinkedinIcon from "../components/LinkedinIcon";
-import TwitchIcon from "../components/TwitchIcon";
-import DribbbleIcon from "../components/DribbbleIcon";
+// import FacebookIcon from "../components/FacebookIcon";
+// import InstagramIcon from "../components/InstagramIcon";
+// import YoutubeIcon from "../components/YoutubeIcon";
+// import LinkedinIcon from "../components/LinkedinIcon";
+// import TwitchIcon from "../components/TwitchIcon";
+// import DribbbleIcon from "../components/DribbbleIcon";
 
 export default function Home() {
   return (
@@ -21,9 +21,11 @@ export default function Home() {
               {/* Left side - Image container */}
               <div className="w-full md:w-1/2 h-[325.52px] md:h-full">
                 <div className="relative h-full">
-                  <img
+                  <Image
                     src="/starbucksimg1.jpg"
                     alt="A trio of drinks in clear glasses"
+                    width={800}
+                    height={325}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -60,17 +62,6 @@ export default function Home() {
         <section className="bg-[#1e3932] mx-0 sm:mx-4 md:mx-2 mt-8 md:mt-8">
           <div className="mx-auto max-w-[1440px]">
             <div className="flex flex-col md:flex-row">
-              {/* Image container - First on mobile */}
-              <div className="w-full md:w-1/2 h-[325.52px] md:h-full">
-                <div className="relative h-full">
-                  <img
-                    src="/st2img.jpg"
-                    alt="Ethiopia Single-Origin Coffee"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-
               {/* Content container - Second on mobile */}
               <div className="w-full md:w-1/2 flex items-center justify-center bg-[#CEE6B5] py-8 md:py-0">
                 <div className="text-center flex flex-col items-center">
@@ -97,7 +88,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Image container - On right for desktop */}
+              {/* Image container - First on mobile */}
               <div className="w-full md:w-1/2 h-[325.52px] md:h-full">
                 <div className="relative h-full">
                   <img

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 function Header() {
   const pathname = usePathname();
@@ -18,9 +19,11 @@ function Header() {
         {/* Left section - Logo */}
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center">
-            <img
+            <Image
               src="/starbuckslogo.png"
               alt="Starbucks"
+              width={40}
+              height={40}
               className="h-[40px] w-[40px]"
             />
           </Link>
