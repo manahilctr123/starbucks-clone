@@ -1,5 +1,7 @@
 import "./globals.css";
 import { Metadata } from "next";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Starbucks Clone",
@@ -20,7 +22,9 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans" suppressHydrationWarning>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
