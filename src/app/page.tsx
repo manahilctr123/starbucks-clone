@@ -91,9 +91,11 @@ export default function Home() {
               {/* Image container - First on mobile */}
               <div className="w-full md:w-1/2 h-[325.52px] md:h-full">
                 <div className="relative h-full">
-                  <img
+                  <Image
                     src="/st2img.jpg"
                     alt="Ethiopia Single-Origin Coffee"
+                    width={800}
+                    height={325}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -119,7 +121,7 @@ export default function Home() {
           <div className="flex-1 bg-[#FBF5E7] flex flex-col justify-center items-center text-center px-4 py-8 md:py-0">
             <div>
               <h1 className="text-[24px] font-medium text-[#1E3932] mb-6 tracking-[.03em]">
-                It's a great day for free coffee
+                It&apos;s a great day for free coffee
               </h1>
               <p className="mb-8 text-[19px] text-[#1E3932] tracking-[.02em]">
                 Start your Starbucks® Rewards journey with a coffee on <br />
