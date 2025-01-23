@@ -9,12 +9,7 @@ import DribbbleIcon from "./DribbbleIcon";
 
 export default function Footer() {
   return (
-    <footer
-      className={`
-        bg-white px-8 md:px-16 py-12
-        shadow-[0_-1px_3px_rgba(0,0,0,.1),0_-2px_2px_rgba(0,0,0,.06),0_0_2px_rgba(0,0,0,.07),0_1px_3px_rgba(0,0,0,.1),0_2px_2px_rgba(0,0,0,.06),0_0_2px_rgba(0,0,0,.07),0_1px_3px_rgba(0,0,0,.1),0_2px_2px_rgba(0,0,0,.06),0_0_2px_rgba(0,0,0,.07)]
-      `}
-    >
+    <footer className="bg-white px-8 md:px-16 py-12 shadow-[0_-1px_3px_rgba(0,0,0,.1),0_-2px_2px_rgba(0,0,0,.06),0_0_2px_rgba(0,0,0,.07)]">
       {/* Footer Links Grid */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
         {/* About Us Column */}

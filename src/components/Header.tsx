@@ -12,31 +12,34 @@ function Header() {
   return (
     <header
       className={`
-          w-full bg-white
-          shadow-[0_1px_3px_rgba(0,0,0,.1),0_2px_2px_rgba(0,0,0,.06),0_0_2px_rgba(0,0,0,.07)]
-        `}
+    w-full bg-white z-50 relative
+    shadow-[0_1px_3px_rgba(0,0,0,.1),0_2px_2px_rgba(0,0,0,.06),0_0_2px_rgba(0,0,0,.07)]
+  `}
     >
-      <nav className="mx-auto flex h-[72px] sm:h-[95px] max-w-[1440px] items-center justify-between px-6">
+      <nav className="mx-auto flex h-[82px] sm:h-[95px] max-w-[1440px] items-center justify-between px-6">
         {/* Left section - Logo */}
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center">
-            <Image
-              src="/starbuckslogo.png"
-              alt="Starbucks"
-              width={40}
-              height={40}
-              className="h-[40px] w-[40px]"
-            />
+            <div className="w-[45px] h-[45px] sm:w-[51px] sm:h-[51px]">
+              <Image
+                src="/starbuckslogo.png"
+                alt="Starbucks"
+                width={49}
+                height={49}
+                className="w-full h-full"
+                priority
+              />
+            </div>
           </Link>
           {/* Menu items - Hidden on mobile */}
           <ul className="hidden sm:flex gap-8">
             <li>
               <Link
                 href="/menu"
-                className={`text-[13px] font-extrabold tracking-[.01em] text-black hover:text-[#00754a] relative
+                className={`text-[13px] font-extrabold tracking-[.1em] text-black hover:text-[#00754a] relative
                   ${
                     pathname === "/menu"
-                      ? "after:absolute after:bottom-[-39px] after:left-0 after:w-full after:h-[6px] after:bg-[#00754a]"
+                      ? "after:absolute after:bottom-[-39px] after:left-[-2px] after:w-full after:h-[6px] after:bg-[#00754a]"
                       : ""
                   }`}
               >

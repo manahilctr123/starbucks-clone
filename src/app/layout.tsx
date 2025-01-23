@@ -24,11 +24,13 @@ export default function RootLayout({
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
           />
         </head>
-        <body className="font-sans antialiased" suppressHydrationWarning>
+        <body className="min-h-screen" suppressHydrationWarning>
           <ConvexClientProvider>
-            <Header />
-            {children}
-            <Footer />
+            <div className="flex flex-col min-h-screen">
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
           </ConvexClientProvider>
         </body>
       </html>
