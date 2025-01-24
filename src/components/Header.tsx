@@ -27,7 +27,7 @@ function Header() {
                 width={49}
                 height={49}
                 className="w-full h-full"
-                priority
+                // priority
               />
             </div>
           </Link>
