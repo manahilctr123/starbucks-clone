@@ -6,6 +6,7 @@ export default defineSchema({
     name: v.string(),
     order: v.number(),
     isFood: v.boolean(),
+    imageUrl: v.optional(v.string()),
     parentId: v.optional(v.id("categories")),
   }),
 
